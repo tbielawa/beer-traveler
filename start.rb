@@ -1,4 +1,5 @@
 #!/usr/bin/ruby
+require 'yaml'
 require 'json'
 require 'pp'
 require 'rest-client'
@@ -15,9 +16,10 @@ end
 OFFSET_INCREMENT = 25
 
 ######################################################################
-# API Information
-CLIENT_ID = #id
-CLIENT_SECRET = #secret
+# Load API information
+y = YAML::( File.open('auth_information.yaml'))
+CLIENT_ID = y['client_id']
+CLIENT_SECRET = y['client_secret']
 
 ######################################################################
 # Resource information
