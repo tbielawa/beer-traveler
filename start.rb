@@ -84,7 +84,7 @@ end
 # Save results
 File.open("distinct_beers-#{USER}.json", 'w') { |file| file.write(JSON.dump(DISTINCT_BEERS)) }
 
-# Print out everything we did manage to get
+# Print out everything we managed to get
 pp DISTINCT_BEERS
 ######################################################################
 # Collect data
